@@ -42,8 +42,9 @@ function getOriginalImg(evt) {
 
     if (instance.show) {
         document.addEventListener("keydown", event => {
-            event.code === 'Esc';
-            return instance.close();
+            if (event.code === 'Escape') {
+                instance.close();
+            }
         });
     }
 }
